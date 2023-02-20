@@ -53,7 +53,7 @@
 
     homeConfigurations."lukasz" = mkHome {
       pkgs = self.outputs.nixosConfigurations.qemu-vm.pkgs;
-      modules = [./home/lukasz.nix];
+      modules = [./home];
       extraSpecialArgs = {inherit self inputs;};
     };
   };

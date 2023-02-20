@@ -1,15 +1,15 @@
 {
-  self,
   inputs,
   pkgs,
   lib,
-  config,
   ...
 }: {
   imports = [
-    self.homeManagerModules
-    ./xdg.nix
-    ./programs
+    ./fonts.nix
+    ./git.nix
+    ./neovim.nix
+    ./programs.nix
+    ./misc
   ];
 
   home = {
@@ -27,4 +27,17 @@
       WLR_NO_HARDWARE_CURSORS = "1";
     };
   };
+
+  home.packages = with pkgs; [
+    libreoffice
+    keepassxc
+    yt-dlp
+    mpv
+    imv
+    nnn
+    zip
+    unzip
+    imagemagick
+    ffmpeg
+  ];
 }
