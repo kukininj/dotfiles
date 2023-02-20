@@ -6,7 +6,7 @@
 }: {
   imports = [
     ./git.nix
-    ./neovim.nix
+    ./editors
     ./programs.nix
     ./alacritty.nix
     ./sway.nix

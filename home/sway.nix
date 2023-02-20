@@ -22,6 +22,7 @@
     enable = true;
     systemdIntegration = true;
     config = rec {
+      menu = "bemenu-run";
       bars = [];
       modifier = "Mod4";
       # Use kitty as default terminal
