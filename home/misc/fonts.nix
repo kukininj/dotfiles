@@ -5,30 +5,14 @@
   ...
 }:
 with lib; let
-  cfg = config.fontProfiles;
-
-  fontModule = {
-    family = mkOption {
-      type = types.str;
-    };
-
-    package = mkOption {
-      type = types.nullOr types.package;
-    };
-  };
 in {
-  options.fontProfiles = {
-    regular = fontModule;
-    monospace = fontModule;
-  };
-
   config = {
     fonts.fontconfig.enable = true;
-    home.packages = [
-      cfg.regular.package
-      cfg.monospace.package
+    home.packages = with pkgs; [
+      jetbrains-mono
+      nerdfonts
     ];
 
-    gtk.font.name = cfg.regular.family;
+    gtk.font.name = "JetBrains Mono";
   };
 }

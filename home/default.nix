@@ -5,10 +5,11 @@
   ...
 }: {
   imports = [
-    ./fonts.nix
+    # ./fonts.nix
     ./git.nix
     ./neovim.nix
     ./programs.nix
+    ./alacritty.nix
     ./misc
   ];
 
