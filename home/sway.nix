@@ -16,13 +16,13 @@
   home.packages = with pkgs; [
     alacritty
     bemenu
-    waybar
   ];
 
   wayland.windowManager.sway = {
     enable = true;
     systemdIntegration = true;
     config = rec {
+      bars = [];
       modifier = "Mod4";
       # Use kitty as default terminal
       terminal = "alacritty"; 
