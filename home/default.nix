@@ -9,6 +9,7 @@
     ./neovim.nix
     ./programs.nix
     ./alacritty.nix
+    ./sway.nix
     ./misc
   ];
 
