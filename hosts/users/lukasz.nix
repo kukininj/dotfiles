@@ -10,4 +10,10 @@
   };
 
   programs.zsh.enable = true;
+
+  
+  environment.sessionVariables = rec {
+    XDG_CONFIG_HOME = "\${HOME}/.config";
+  };
+
 }
