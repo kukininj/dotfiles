@@ -2,7 +2,7 @@
   description = "Lukasz NixOS config";
 
   inputs = {
-    nixpkgs.url = github:nixos/nixpkgs/nixos-unstable;
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # flakes
     home-manager.url = "github:nix-community/home-manager";
