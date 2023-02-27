@@ -15,13 +15,16 @@
 
   home.packages = with pkgs; [
     alacritty
-    bemenu
+    wofi
   ];
 
   wayland.windowManager.sway = {
     enable = true;
+    ## sway-session.target is never stopped
     systemdIntegration = true;
-    config = null;
+    extraSessionCommands = ''
+    export WLR_NO_HARDWARE_CURSORS=1
+    '';
     # config = rec {
     #   menu = "bemenu-run";
     #   bars = []; # can be empty, waybar is run with systemd
