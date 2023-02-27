@@ -9,7 +9,7 @@
     ./editors
     ./programs.nix
     ./alacritty.nix
-    ./sway.nix
+    ./sway
     ./misc
   ];
 
