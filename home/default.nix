@@ -27,6 +27,8 @@
       EDITOR = "hx";
       WLR_NO_HARDWARE_CURSORS = "1";
     };
+
+    file."Wallpapers".source = ./wallpapers;
   };
 
   home.packages = with pkgs; [
